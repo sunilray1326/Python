@@ -7,6 +7,7 @@ def fun1():
     print("I am fun1")
 
 # calculate power of given number, if no power given then default to 1
+# the dafault value parameters must come after all non-default parameters
 def power(num, pw=1):
     print("\nInside power() function")
     result = 1
@@ -34,17 +35,17 @@ def add(*num):
 
 # we can pass variable argumemts to function but it shuold be last parameter
 # we can either pass one value or none to this parameter and it works
-def add_multi(num1, num2, *values):
+def add_multi(num1, num2, *args):
     print("\ninside add_multi() function")
     # while printing string and number, we need to convert number to string
-    print("num1:", str(num1), "num2:", str(num2), "values:", str(values))
+    print("num1:", str(num1), "num2:", str(num2), "*args:", str(args))
     
     result = num1 + num2
     
     # If there is no value in list, the loop will not execute
     # Even if value is 0 in case it is number, loop will execute
     # for (0,0,0,0) as values, loop will execute 4 times
-    for i in values:
+    for i in args:
         print(i)
         result = result + i
     return result
@@ -69,13 +70,14 @@ print(fun1)
 print(power(2))
 print(power(2,4))
 
-print(add(2,3,4,5))
-print(add(9,8,7,6))
+print("Result of add() => {}".format(add()))
+print("Result of add(2,3) => {}".format(add(2,3)))
+print("Result of add(4,5,6) => {}".format(add(4,5,6)))
+print("Result of add(7,8,9,10) => {}".format(add(7,8,9,10)))
 
 print(add_multi(9,8,7))
 print(add_multi(9,8,7,6))
-
-# we are not passing any value to third parameter here but it works
+# even if we don't pass any value to *args parameter, it still works
 print(add_multi(9,8))
 print(add_multi(9,8,0))
 print(add_multi(9,8,0,0,0,0))
