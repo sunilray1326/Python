@@ -1,4 +1,7 @@
+## Basic sequence types in Python is List and Tuple
+## List is mutubale and Tuple is similar to list but non-mutuable
 
+import itertools
 
 # creating and initializing list
 x = [1, 2, 3, 4]
@@ -11,7 +14,7 @@ print(x)
 print('x type is', type(x))
 print("-----------------------------------\n")
 
-# if we assign value with (), then it is typle and cannot be changed
+# if we assign value with (), then it is tuple and cannot be changed
 x = (1,2,3,4)
 print(x)
 print('x type is', type(x))
@@ -31,6 +34,17 @@ print(x)
 print('x type is', type(x))
 print("-----------------------------------\n")
 
+## below creates dictionary
+dict1 = {'key1' : 'value1', 'key2' : 'value2', 'key3' : 'value3', 'key4' : 'value4'}
+print("list2 type is ", type(dict1))
+for i,j in dict1.items():
+    print("Key: ", i, "Value: ", j)
+## we can modify dict type as it is mutabl
+dict1["key2"] = "value10"
+print(dict1)
+
+
+## another way to create a list
 listObj = list()
 listObj.append("Name 1")
 listObj.append("Name 2")
@@ -55,12 +69,3 @@ print("-----------------------------------\n")
 ## use list() and range() to initialiaze list
 list1 = list(range(4))
 print("list1 is - ", list1)
-
-## below creates dictionary
-dict1 = {'key1' : 'value1', 'key2' : 'value2', 'key3' : 'value3', 'key4' : 'value4'}
-print("list2 type is ", type(dict1))
-for i,j in dict1.items():
-    print("Key: ", i, "Value: ", j)
-## we can modify dict type as it is mutabl
-dict1["key2"] = "value10"
-print(dict1)

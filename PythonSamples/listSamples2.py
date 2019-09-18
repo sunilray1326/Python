@@ -84,8 +84,8 @@ print("---------------------------------------------------------------")
 ## and we will get list of individual characters
 msgStr = input("Enter a sentence to convert to list: ")
 list4 = msgStr.split(' ')
-## if we use for i in msgStr then i will be one character at a time
-print(list4)
-print("The max occured character in string is: ", max(list4,key=list4.count))
+## if we use "for i in msgStr" to build list, i will be one character at a time so list of characters
+print("The list is:", list4)
+print("The max occured word in the list is: ", max(list4,key=list4.count))
 findStr = input("Enter search string: ")
 print(findStr, "is in list?", findStr in list4)
