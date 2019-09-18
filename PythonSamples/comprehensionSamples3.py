@@ -42,3 +42,4 @@ list3 = [i for i in list1 if i not in list2]
 list4 = [i for i in list1 if i in list2]
 print("List3 => ", list3)
 print("List4 => ", list4)
+
