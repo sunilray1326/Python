@@ -1,11 +1,17 @@
 
 
-#dict1 = {'name': 'Harsh', 'age': 14, 'address': 'Luxor Park', 'class': 10}
-dict1 = dict(name = 'Harsh', age = 14, address = 'Luxor Park', grade = 10)
+dict1 = {'name': 'Harsh', 'age': 14, 'address': 'Luxor Park', 'class': 10}
+#dict1 = dict(name='Harsh', age=14, address='Luxor Park', grade=10)
+
+## Please note that we can add a int value as KEY in first approach where we initialize list using { }
+## we cannot add a KEY as int value in second approach, using dict() constructor
+
+print(dict1)
 
 print("\nPrint dict using for")
 print("------------------------------------")
 for key in dict1:
+    print("KEY TYPE: ", type(key))
     print(key, dict1[key])
 
 print("\nPrint dict using items()")
@@ -25,7 +31,9 @@ for val in dict1.values():
 
 print("\nGet one key value using keys")
 print("------------------------------------")
-print("class: ", dict1.get("grade"))
+print("GRADE: ", dict1.get("class"))
+str1 = 'class'
+print("GRADE: ", dict1[str1])
 
 ## update one value using key
 print("\nPrint new updated dict")
