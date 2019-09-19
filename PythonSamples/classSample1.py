@@ -46,6 +46,3 @@ try:
     print("obj2 Department: ", obj2.__name)
 except AttributeError:
     print("\n**** EXCEPTION - Caught AttributeError, object doesn't have such attribute ****\n")
-
-
-
